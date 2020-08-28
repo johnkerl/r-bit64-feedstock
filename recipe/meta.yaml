@@ -1,4 +1,4 @@
-{% set version = "4.0.2" %}
+{% set version = "4.0.4" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bit64_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bit64/bit64_{{ version }}.tar.gz
-  sha256: e9a5730f3b14558ef317b79ae9f8c4b4593c4ef0bb002a88474ad3d6f7db3cfb
+  sha256: 92d1abc81cd68b6511e722caec99b8d2b975f1af75bd63fa9aca8ddc87a4bfb5
 
 build:
   merge_build_host: true  # [win]
@@ -54,7 +54,7 @@ about:
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
-    
+
 extra:
   recipe-maintainers:
     - conda-forge/r
